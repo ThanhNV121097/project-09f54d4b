@@ -1,11 +1,43 @@
 {
-  "site": { "name": "Your business" },
-  "nav": { "links": [{ "label": "Home", "href": "/" }], "cta": { "label": "Get in touch", "href": "#contact" } },
-  "hero": {
-    "eyebrow": "",
-    "headline": "A headline of a few words",
-    "sub": "One line under it, and no more.",
-    "cta": { "label": "Get in touch", "href": "#contact" }
+  "site": { "name": "Tony Apple" },
+  "nav": {
+    "links": [
+      { "label": "Products", "href": "#products" },
+      { "label": "Genuine", "href": "#authentic" }
+    ],
+    "cta": { "label": "Find the store", "href": "#visit" }
   },
-  "footer": { "line": "Your business · District 1, Saigon" }
+  "hero": {
+    "headline": "Genuine Apple accessories",
+    "sub": "Chargers, cases, AirPods and watch bands, sold at 19 Duy Tân, Hà Nội.",
+    "cta": { "label": "See the accessories", "href": "#products" }
+  },
+  "products": {
+    "heading": "What's in stock",
+    "items": [
+      {
+        "name": "AirPods & headphones",
+        "note": "AirPods Pro, AirPods Max and replacement ear tips."
+      },
+      {
+        "name": "Cases",
+        "note": "Silicone, leather and clear cases for the current iPhone lineup."
+      },
+      {
+        "name": "Chargers & cables",
+        "note": "MagSafe chargers, USB-C cables and power adapters."
+      },
+      {
+        "name": "Watch bands",
+        "note": "Sport, braided and leather bands for Apple Watch."
+      }
+    ]
+  },
+  "authentic": {
+    "heading": "Checked before it reaches the shelf",
+    "body": "Every accessory here comes boxed and sealed from Apple's own supply chain, not a copy stamped with its logo."
+  },
+  "footer": {
+    "line": "19 Duy Tân, Hà Nội"
+  }
 }
