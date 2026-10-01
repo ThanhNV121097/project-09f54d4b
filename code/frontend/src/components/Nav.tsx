@@ -5,10 +5,10 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-10 bg-dark border-b border-line-dark">
       <div className="mx-auto max-w-page px-[var(--gutter)] h-16 flex items-center justify-between">
-        <T k="site.name" as="a" href="/" className="font-display font-[var(--weight-display)] tracking-[var(--tracking-display)] text-dark-ink" />
-        <nav className="flex items-center gap-8 text-sm text-dark-ink-soft">
+        <T k="site.name" as="a" href="/" className="font-display font-[var(--weight-display)] tracking-[var(--tracking-display)] text-dark-ink whitespace-nowrap" />
+        <nav className="flex items-center gap-6 md:gap-8 text-sm text-dark-ink-soft">
           {links.map((l, i) => (
-            <T key={i} k={`nav.links.${i}.label`} as="a" href={l.href} className="hover:text-dark-ink transition-colors duration-[var(--duration-fast)]" />
+            <T key={i} k={`nav.links.${i}.label`} as="a" href={l.href} className="hidden sm:inline hover:text-dark-ink transition-colors duration-[var(--duration-fast)]" />
           ))}
           <T
             k="nav.cta.label"
