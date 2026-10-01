@@ -10,10 +10,16 @@ export default function Products() {
           {items.map((item, i) => (
             <article
               key={i}
-              className={`rounded-[var(--radius)] bg-surface border border-line p-8 ${i === 0 ? "md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[280px]" : "min-h-[160px] flex flex-col justify-end"}`}
+              className={`relative overflow-hidden rounded-[var(--radius)] bg-surface border border-line p-8 ${i === 0 ? "md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[280px]" : "min-h-[160px] flex flex-col justify-end"}`}
             >
-              <T k={`products.items.${i}.name`} as="h3" className="font-display font-[var(--weight-display)] text-xl" />
-              <T k={`products.items.${i}.note`} as="p" className="mt-2 text-ink-soft max-w-[36ch]" />
+              {i === 0 && (
+                <div
+                  className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full"
+                  style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%)" }}
+                />
+              )}
+              <T k={`products.items.${i}.name`} as="h3" className="relative font-display font-[var(--weight-display)] text-xl" />
+              <T k={`products.items.${i}.note`} as="p" className="relative mt-2 text-ink-soft max-w-[36ch]" />
             </article>
           ))}
         </div>
