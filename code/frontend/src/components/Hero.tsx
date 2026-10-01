@@ -3,7 +3,13 @@ import { T } from "../editable";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-dark text-dark-ink">
-      <div className="pointer-events-none absolute -right-[10vw] top-1/2 h-[70vw] max-h-[720px] w-[70vw] max-w-[720px] -translate-y-1/2 rounded-full ring" />
+      <div
+        className="pointer-events-none absolute -right-[10vw] top-1/2 h-[70vw] max-h-[720px] w-[70vw] max-w-[720px] -translate-y-1/2 rounded-full"
+        style={{
+          background: "radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 70%)",
+          animation: "glow-pulse var(--duration-slow) var(--ease-out) infinite",
+        }}
+      />
       <div className="relative mx-auto max-w-page px-[var(--gutter)] pt-24 pb-32 md:pt-32 md:pb-40">
         <T
           k="hero.headline"
