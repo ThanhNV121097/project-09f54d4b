@@ -13,10 +13,17 @@ export default function Products() {
               className={`relative overflow-hidden rounded-[var(--radius)] bg-surface border border-line p-8 ${i === 0 ? "md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[280px]" : "min-h-[160px] flex flex-col justify-end"}`}
             >
               {i === 0 && (
-                <div
-                  className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full"
-                  style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%)" }}
-                />
+                <svg
+                  className="pointer-events-none absolute right-6 top-6 h-32 w-32 md:h-44 md:w-44 opacity-90"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect x="20" y="8" width="60" height="84" rx="14" fill="var(--ground)" stroke="var(--line)" strokeWidth="1.5" />
+                  <circle cx="50" cy="50" r="16" fill="none" stroke="var(--accent)" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="5" fill="var(--accent)" />
+                  <line x1="50" y1="34" x2="50" y2="29" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" />
+                </svg>
               )}
               <T k={`products.items.${i}.name`} as="h3" className="relative font-display font-[var(--weight-display)] text-xl" />
               <T k={`products.items.${i}.note`} as="p" className="relative mt-2 text-ink-soft max-w-[36ch]" />
